@@ -4,7 +4,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'maven'
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
 //    compileOnly 'com.google.android:support-v4:r7'
 //    javadocDeps 'com.google.android:support-v4:r7'

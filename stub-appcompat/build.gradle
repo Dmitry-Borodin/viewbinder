@@ -15,7 +15,7 @@ repositories {
 
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile project(':stub-android')
 //    javadocDeps 'com.google.android:android:4.1.1.4'
 //    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
