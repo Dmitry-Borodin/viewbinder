@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Viewbinder</string>
+    <string name="open_fragment">open fragment</string>
+    <string name="open_view">open custom view</string>
+    <string name="open_dialog_fragment">open dialog fragment</string>
+    <string name="hello_from_activity">hello from activity</string>
+    <string name="fragment_example_close_button">Close fragment</string>
+    <string name="fragment_example_header_text">Fragment header text</string>
+    <string name="dialog_fragment_button_text">Close fragment dialog</string>
+    <string name="dialog_fragment_header">Fragment dialog header text</string>
+</resources>

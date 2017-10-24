@@ -1,0 +1,1 @@
+include ':sample-android', ':viewbinder-android', ':stub-android', ':sample-appcompat', 'stub-appcompat'

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">sample-appcompat</string>
+    <string name="activity_example_header">AppCompatActivity header text</string>
+    <string name="dialog_fragment_header">SupportDialogFragment header</string>
+    <string name="dialog_fragment_button">Close SupportDialogFragment</string>
+    <string name="fragment_example_header">Fragment header</string>
+    <string name="fragment_example_button_title">Close fragment</string>
+</resources>
