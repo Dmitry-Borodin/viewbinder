@@ -1,7 +1,40 @@
 //apply plugin: 'java'
 apply plugin: 'kotlin'
 apply plugin: 'maven-publish'
-apply plugin: 'maven'
+apply plugin: 'com.jfrog.bintray'
+
+//   ./gradlew build bintrayUpload // to upload
+bintray {
+    def keyProps = new Properties()
+    keyProps.load(new FileInputStream(rootProject.file('viewbinder-secret/credentials.properties')))
+    user = keyProps["bintrayUser"]
+    key = keyProps["bintrayKey"]
+    publications = ['MyPublication']
+    pkg {
+        repo = 'viewbinder'
+        name = 'viewbinder'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/Dmitry-Borodin/viewbinder'
+
+        version {
+            name = '0.2'
+            desc = 'viewbinder to bind your views by kotlin delegates'
+            released  = new Date()
+//            vcsTag = '1.3.0'
+//            attributes = ['gradle-plugin': 'com.krenvpravo.viewbinder:viewbinder:0.1']
+        }
+    }
+}
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            artifact jar
+            groupId 'com.krenvpravo.viewbinder'
+            artifactId 'viewbinder'
+            version '0.2'
+        }
+    }
+}
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -16,16 +49,3 @@ dependencies {
     testCompile 'org.mockito:mockito-core:2.2.15'
 }
 
-//sourceCompatibility = "1.7"
-//targetCompatibility = "1.7"
-//
-//compileKotlin {
-//    kotlinOptions {
-//        jvmTarget = "1.7"
-//    }
-//}
-//compileTestKotlin {
-//    kotlinOptions {
-//        jvmTarget = "1.7"
-//    }
-//}

@@ -1,0 +1,4 @@
+[submodule "viewbinder-secret"]
+	path = viewbinder-secret
+	url = https://gitlab.com/krenvpravo/viewbinder-secret.git
+	branch = origin/master
