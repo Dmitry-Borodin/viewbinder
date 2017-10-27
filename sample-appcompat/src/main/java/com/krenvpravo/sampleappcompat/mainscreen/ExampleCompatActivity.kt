@@ -11,24 +11,27 @@ import com.krenvpravo.sampleappcompat.otherscreens.ExampleDialogFragment
 import com.krenvpravo.sampleappcompat.otherscreens.ExampleFragment
 import com.viewbinder.bindView
 import com.krenvpravo.sampleappcompat.ScreenItemModel
+import com.krenvpravo.sampleappcompat.otherscreens.CustomViewController
 
 class ExampleCompatActivity : AppCompatActivity() {
 
     private val headerTextView by bindView<TextView>(R.id.activity_example_header_text)
     private val recycler by bindView<RecyclerView>(R.id.activity_compat_recycler)
+    private lateinit val router: Router
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_compat)
-        initViews()
+        initViews(savedInstanceState)
     }
 
-    private fun initViews() {
+    private fun initViews(savedInstanceState: Bundle?) {
         headerTextView.text = getString(R.string.activity_example_header)
         val adapter = ExampleAdapter()
         adapter.screenItems = createScreensList()
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = adapter
+        router = Conductor.attachRouter(this, R.id.activity_compat_container, savedInstanceState)
     }
 
     private fun showExampleFragment() {
@@ -44,11 +47,16 @@ class ExampleCompatActivity : AppCompatActivity() {
         dialogFragment.show(fragmentManager, dialogFragment.javaClass.simpleName)
     }
 
-    private fun showCustomView() {
-        Toast.makeText(this, "custom view will be later", Toast.LENGTH_LONG).show()
+    private fun showConductorView() {
+        if (!router.hasRootController()) {
+            router.setRoot(RouterTransaction.with(CustomViewController()))
+        }
     }
 
     override fun onBackPressed() {
+        if (router.handleBack()) { //todo check javadock whether true or false when will have inernet
+            return
+        }
         if (fragmentManager.backStackEntryCount > 0) {
             fragmentManager.popBackStack()
         } else {
@@ -60,7 +68,7 @@ class ExampleCompatActivity : AppCompatActivity() {
         val list = mutableListOf<ScreenItemModel>()
         list.add(ScreenItemModel("Fragment", this::showExampleFragment))
         list.add(ScreenItemModel("FragmentDialog", this::showExampleFragmentDialog))
-        list.add(ScreenItemModel("CustomView", this::showCustomView))
+        list.add(ScreenItemModel("CustomView", this::showConductorView))
         return list
     }
 }
