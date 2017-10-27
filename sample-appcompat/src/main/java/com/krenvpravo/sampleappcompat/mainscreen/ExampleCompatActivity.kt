@@ -5,13 +5,12 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.TextView
-import android.widget.Toast
 import com.krenvpravo.sampleappcompat.R
+import com.krenvpravo.sampleappcompat.ScreenItemModel
+import com.krenvpravo.sampleappcompat.otherscreens.CustomViewController
 import com.krenvpravo.sampleappcompat.otherscreens.ExampleDialogFragment
 import com.krenvpravo.sampleappcompat.otherscreens.ExampleFragment
 import com.viewbinder.bindView
-import com.krenvpravo.sampleappcompat.ScreenItemModel
-import com.krenvpravo.sampleappcompat.otherscreens.CustomViewController
 
 class ExampleCompatActivity : AppCompatActivity() {
 
@@ -68,7 +67,7 @@ class ExampleCompatActivity : AppCompatActivity() {
         val list = mutableListOf<ScreenItemModel>()
         list.add(ScreenItemModel("Fragment", this::showExampleFragment))
         list.add(ScreenItemModel("FragmentDialog", this::showExampleFragmentDialog))
-        list.add(ScreenItemModel("CustomView", this::showConductorView))
+        list.add(ScreenItemModel("Conductor view", this::showConductorView))
         return list
     }
 }

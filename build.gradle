@@ -35,5 +35,4 @@ ext {
     buildToolsVersion = '26.0.1'
 
     supportLibraryVersion = '26.1.0'
-    conductorVersion = '2.1.0'
 }
