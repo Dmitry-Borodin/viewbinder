@@ -5,4 +5,6 @@
     <string name="dialog_fragment_button">Close SupportDialogFragment</string>
     <string name="fragment_example_header">Fragment header</string>
     <string name="fragment_example_button_title">Close fragment</string>
+    <string name="conductor_view_button_title">Close conductor custom view</string>
+    <string name="conductor_view_header_text">Conductor crontroller header it\'s based on custom view</string>
 </resources>

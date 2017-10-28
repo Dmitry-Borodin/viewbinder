@@ -8,13 +8,14 @@ import android.widget.Button
 import android.widget.TextView
 import com.bluelinelabs.conductor.Controller
 import com.krenvpravo.sampleappcompat.R
+import com.viewbinder.bindView
 
 /**
  * @author Dmitry Borodin on 2017-10-27.
  */
-class CustomViewController(args : Bundle? = null) : Controller(args) { //todo check empty the same as with null when will have internet
-    private val button by bind<Button>(R.id.fragment_example_button)
-    private val headerText by bind<TextView>(R.id.fragment_example_header_text)
+class CustomViewController(args : Bundle? = null) : Controller(args) {
+    private val button by bindView<Button>(R.id.fragment_example_button)
+    private val headerText by bindView<TextView>(R.id.fragment_example_header_text)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
         val view = inflater.inflate(R.layout.fragment_example, container, false)
@@ -23,8 +24,8 @@ class CustomViewController(args : Bundle? = null) : Controller(args) { //todo ch
     }
 
     private fun initViews() {
-        button.text = "Close conductor custom view"
+        button.text = view?.context?.getString(R.string.conductor_view_button_title)
         button.setOnClickListener { handleBack() } //todo fix when will be able synch gradle
-        headerText.text = "Conductor crontroller header it's based on custom view"
+        headerText.text = view?.context?.getString(R.string.conductor_view_header_text)
     }
 }

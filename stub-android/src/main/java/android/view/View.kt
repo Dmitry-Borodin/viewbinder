@@ -9,7 +9,11 @@ import android.support.annotation.IdRes
 @Suppress("UNUSED_PARAMETER")
 open class View {
 
-    fun findViewById(@IdRes id: Int): View {
+//    fun findViewById(@IdRes id: Int): View {
+//        throw NotImplementedError("stub")
+//    }
+
+    fun <T : View> findViewById(@IdRes id: Int): T {
         throw NotImplementedError("stub")
     }
     val rootView: View
