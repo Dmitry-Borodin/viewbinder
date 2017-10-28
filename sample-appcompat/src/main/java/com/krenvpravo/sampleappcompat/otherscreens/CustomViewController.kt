@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.bluelinelabs.conductor.Controller
 import com.krenvpravo.sampleappcompat.R
 
 /**
@@ -23,7 +24,7 @@ class CustomViewController(args : Bundle? = null) : Controller(args) { //todo ch
 
     private fun initViews() {
         button.text = "Close conductor custom view"
-        button.setOnClickListener { dismiss() } //todo fix when will be able synch gradle
+        button.setOnClickListener { handleBack() } //todo fix when will be able synch gradle
         headerText.text = "Conductor crontroller header it's based on custom view"
     }
 }

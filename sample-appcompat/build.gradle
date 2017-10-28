@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.krenvpravo.sampleappcompat"
-        minSdkVersion rootProject.minSdkVersion
+        minSdkVersion 16 // conductor requirement
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
@@ -26,7 +26,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile "com.bluelinelabs:conductor:2.1.0"
+    compile "com.bluelinelabs:conductor:2.1.4"
     compile project(path: ':viewbinder-android')
 
     testCompile 'junit:junit:4.12'
