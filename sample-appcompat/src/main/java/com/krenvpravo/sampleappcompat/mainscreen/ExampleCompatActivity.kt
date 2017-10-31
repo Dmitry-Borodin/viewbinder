@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.ViewGroup
 import android.widget.TextView
 import com.bluelinelabs.conductor.Conductor
 import com.bluelinelabs.conductor.Router
@@ -19,6 +20,7 @@ class ExampleCompatActivity : AppCompatActivity() {
 
     private val headerTextView by bindView<TextView>(R.id.activity_example_header_text)
     private val recycler by bindView<RecyclerView>(R.id.activity_compat_recycler)
+    private val container by bindView<ViewGroup>(R.id.activity_compat_container)
     private lateinit var router: Router
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +35,7 @@ class ExampleCompatActivity : AppCompatActivity() {
         adapter.screenItems = createScreensList()
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = adapter
-        router = Conductor.attachRouter(this, recycler, savedInstanceState)
+        router = Conductor.attachRouter(this, container, savedInstanceState)
     }
 
     private fun showExampleFragment() {

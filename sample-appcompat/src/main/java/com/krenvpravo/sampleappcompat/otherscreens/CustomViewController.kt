@@ -1,5 +1,6 @@
 package com.krenvpravo.sampleappcompat.otherscreens
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,7 @@ class CustomViewController(args : Bundle? = null) : Controller(args) {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
         val view = inflater.inflate(R.layout.fragment_example, container, false)
+        this.view = view
         initViews()
         return view
     }
