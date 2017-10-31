@@ -4,7 +4,7 @@ import android.app.DialogFragment
 import android.view.View
 import com.viewbinder.ResettableLazy
 import com.viewbinder.LazyResetter
-import com.viewbinder.abstractBind
+import com.viewbinder.abstractBindView
 
 /**
  * @author Dmitry Borodin on 2017-10-22.
@@ -13,7 +13,7 @@ import com.viewbinder.abstractBind
 open class BaseDialogFragment : DialogFragment() {
 
     val lazyManager = LazyResetter()
-    fun <T : View> bind(id: Int): ResettableLazy<T> = abstractBind(id, lazyManager)
+    fun <T : View> bind(id: Int): ResettableLazy<T> = abstractBindView(id, lazyManager)
 
     override fun onStop() {
         super.onStop()
