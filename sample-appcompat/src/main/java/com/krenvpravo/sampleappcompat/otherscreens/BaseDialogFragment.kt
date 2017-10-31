@@ -3,7 +3,7 @@ package com.krenvpravo.sampleappcompat.otherscreens
 import android.app.DialogFragment
 import android.view.View
 import com.viewbinder.ResettableLazy
-import com.viewbinder.ResettableLazyManager
+import com.viewbinder.LazyResetter
 import com.viewbinder.abstractBind
 
 /**
@@ -12,7 +12,7 @@ import com.viewbinder.abstractBind
 
 open class BaseDialogFragment : DialogFragment() {
 
-    val lazyManager = ResettableLazyManager()
+    val lazyManager = LazyResetter()
     fun <T : View> bind(id: Int): ResettableLazy<T> = abstractBind(id, lazyManager)
 
     override fun onStop() {

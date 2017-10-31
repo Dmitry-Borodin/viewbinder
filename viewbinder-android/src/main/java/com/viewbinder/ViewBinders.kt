@@ -15,8 +15,8 @@ import android.view.View
 fun<T : View> Activity.bindView(@IdRes id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 
 //@Suppress("UNCHECKED_CAST") view.findViewById(id) as T
-fun<T : View> Fragment.abstractBind(@IdRes id: Int, lazyManager: ResettableLazyManager)
-        : ResettableLazy<T> = ResettableLazy(lazyManager) { view.findViewById<T>(id) }
+fun<T : View> Fragment.abstractBind(@IdRes id: Int, lazyResetter: LazyResetter)
+        : ResettableLazy<T> = ResettableLazy(lazyResetter) { view.findViewById<T>(id) }
 
 fun <T : View> View.bindView(id: Int) : Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { rootView.findViewById<T>(id) }
 

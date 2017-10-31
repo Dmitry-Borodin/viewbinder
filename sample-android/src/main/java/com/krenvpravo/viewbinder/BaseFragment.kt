@@ -3,7 +3,7 @@ package com.krenvpravo.viewbinder
 import android.app.Fragment
 import android.view.View
 import com.viewbinder.ResettableLazy
-import com.viewbinder.ResettableLazyManager
+import com.viewbinder.LazyResetter
 import com.viewbinder.abstractBind
 
 /**
@@ -11,7 +11,7 @@ import com.viewbinder.abstractBind
  */
 open class BaseFragment : Fragment() {
 
-    val lazyManager = ResettableLazyManager()
+    val lazyManager = LazyResetter()
     fun<T : View> bind(id: Int): ResettableLazy<T> = abstractBind(id, lazyManager)
 
     override fun onStop() {

@@ -13,8 +13,8 @@ add gradle dependencie
 
 If you are using Fragments, add the following code to your base Fragment:
 
-private val lazyManager = ResettableLazyManager()
-fun<T> Fragment.bindView(@IdRes id: Int): ResettableLazy<T> = abstractBind(id, lazyManager)
+private val lazyResetter = ResettableLazyManager()
+fun<T> Fragment.bindView(@IdRes id: Int): ResettableLazy<T> = abstractBind(id, lazyResetter)
 
 note: DialogFragment is a Fragment
 Same for SupportLibrary

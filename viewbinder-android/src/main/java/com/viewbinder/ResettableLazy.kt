@@ -3,7 +3,7 @@ package com.viewbinder
 import java.util.*
 import kotlin.reflect.KProperty
 
-class ResettableLazyManager {
+class LazyResetter {
     private val managedDelegates = LinkedList<Resettable>()
 
     fun register(managed: Resettable) {
@@ -19,7 +19,7 @@ interface Resettable {
     fun reset()
 }
 
-class ResettableLazy<T>(private val manager: ResettableLazyManager,
+class ResettableLazy<T>(private val resetter: LazyResetter,
                         private val init: () -> T) : Resettable {
 
     var lazyHolder : Lazy<T>? = null
@@ -32,7 +32,7 @@ class ResettableLazy<T>(private val manager: ResettableLazyManager,
 
     private fun initLazyHolder(): Lazy<T> {
         val lazyHolder = lazy(LazyThreadSafetyMode.NONE) {
-            manager.register(this)
+            resetter.register(this)
             init()
         }
         this.lazyHolder = lazyHolder

@@ -3,12 +3,12 @@ package com.viewbinder
 import org.junit.Assert.*
 import org.junit.Test
 
-class ResettableLazyManagerTest {
+class LazyResetterTest {
     @Test
     fun testResetableLazyManager() {
         class Something {
             var seed = 1
-            val lazyMgr = ResettableLazyManager()
+            val lazyMgr = LazyResetter()
             val x: String by ResettableLazy(lazyMgr) { "x ${seed}" }
             val y: String by ResettableLazy(lazyMgr) { "y ${seed}" }
             val z: String by ResettableLazy(lazyMgr) { "z $x $y" }
