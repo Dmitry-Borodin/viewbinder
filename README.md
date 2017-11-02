@@ -40,7 +40,7 @@ private val recycler : RecyclerView?  by bindView<RecyclerView?>(R.id.my_view_id
 2. Build tools or support library version > 26
 
 
-Library is based on kotlin delegated properties
+###Library is based on kotlin delegated properties
 #### Pros:
 1. No annotation processing involved -> fast compile time.
 2. Just a few methods in the library -> good for dex limit
