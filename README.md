@@ -11,7 +11,7 @@ private val recycler by bindView<RecyclerView>(R.id.my_view_id)
 
 ## Getting Started:
 
-add gradle dependency
+Add gradle dependency:
 ```
 compile 'com.krenvpravo.viewbinder:viewbinder:0.2'
 ```
@@ -22,9 +22,10 @@ If you are using Fragments, add the following code to your base Fragment:
 private val lazyManager = ResettableLazyManager()
 fun<T> Fragment.bindView(@IdRes id: Int): ResettableLazy<T> = abstractBind(id, lazyManager)
 ```
+Samples in the project shows it in detail.
 
 #### Note:
-DialogFragment is a Fragment
+DialogFragment is a Fragment;
 Same for SupportLibrary
 
 If your view is optional - just mark is as nullable
@@ -40,7 +41,7 @@ private val recycler : RecyclerView?  by bindView<RecyclerView?>(R.id.my_view_id
 2. Build tools or support library version > 26
 
 
-###Library is based on kotlin delegated properties
+### Library is based on kotlin delegated properties
 #### Pros:
 1. No annotation processing involved -> fast compile time.
 2. Just a few methods in the library -> good for dex limit
