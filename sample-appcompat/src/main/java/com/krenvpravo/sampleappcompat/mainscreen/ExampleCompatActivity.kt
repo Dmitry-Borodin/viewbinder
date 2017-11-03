@@ -1,5 +1,6 @@
 package com.krenvpravo.sampleappcompat.mainscreen
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -31,12 +32,14 @@ class ExampleCompatActivity : AppCompatActivity() {
         recycler.adapter = adapter
     }
 
+    @SuppressLint("CommitTransaction") //commit is in lambda
     private fun showExampleFragment() {
         val fragment = ExampleFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.activity_compat_container, fragment)
-        transaction.addToBackStack(fragment.javaClass.simpleName)
-        transaction.commit()
+        supportFragmentManager.beginTransaction().let {
+            it.replace(R.id.activity_compat_container, fragment)
+            it.addToBackStack(fragment.javaClass.simpleName)
+            it.commit()
+        }
     }
 
     private fun showExampleFragmentDialog() {
@@ -57,10 +60,9 @@ class ExampleCompatActivity : AppCompatActivity() {
     }
 
     private fun createScreensList(): List<ScreenItemModel> {
-        val list = mutableListOf<ScreenItemModel>()
-        list.add(ScreenItemModel("Fragment", this::showExampleFragment))
-        list.add(ScreenItemModel("FragmentDialog", this::showExampleFragmentDialog))
-        list.add(ScreenItemModel("CustomView", this::showCustomView))
-        return list
+        return mutableListOf<ScreenItemModel>(
+                ScreenItemModel("Fragment", this::showExampleFragment),
+                ScreenItemModel("FragmentDialog", this::showExampleFragmentDialog),
+                ScreenItemModel("CustomView", this::showCustomView))
     }
 }
