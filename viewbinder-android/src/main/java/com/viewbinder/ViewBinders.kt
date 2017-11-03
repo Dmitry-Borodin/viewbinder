@@ -10,7 +10,6 @@ import android.app.Fragment
 import android.support.annotation.IdRes
 import android.view.View
 
-//public fun<T : View> Activity.bindView(@IdRes id: Int): Lazy<T> = lazy { findViewById(id) as T } //TODO check whether is will be generified in android docks
 @Suppress("UNCHECKED_CAST")
 fun<T : View> Activity.bindView(@IdRes id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 
