@@ -1,4 +1,4 @@
-package com.krenvpravo.viewbinder
+package com.krenvpravo.viewbinder.sample
 
 import android.content.Context
 import android.util.AttributeSet

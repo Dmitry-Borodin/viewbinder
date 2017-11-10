@@ -1,4 +1,4 @@
-package com.krenvpravo.viewbinder
+package com.krenvpravo.viewbinder.sample
 
 import android.app.Activity
 import android.os.Bundle

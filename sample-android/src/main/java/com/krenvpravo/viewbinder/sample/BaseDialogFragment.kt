@@ -1,4 +1,4 @@
-package com.krenvpravo.viewbinder
+package com.krenvpravo.viewbinder.sample
 
 import android.app.DialogFragment
 import android.view.View
