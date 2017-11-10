@@ -1,4 +1,4 @@
-package com.krenvpravo.viewbinder
+package com.krenvpravo.viewbinder.sample
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.widget.TextView
 /**
  * @author Dmitry Borodin on 2017-10-14.
  */
-class ExampleDialogFragment : BaseDialogFragment() {
+class ExampleFragment : BaseFragment() {
 
     private val button by bind<Button>(R.id.fragment_example_button)
     private val headerText by bind<TextView>(R.id.fragment_example_header_text)
@@ -24,8 +24,8 @@ class ExampleDialogFragment : BaseDialogFragment() {
     }
 
     private fun initViews() {
-        button.text = getString(R.string.dialog_fragment_button_text)
-        button.setOnClickListener { dismiss() }
-        headerText.text = getString(R.string.dialog_fragment_header)
+        button.text = getString(R.string.fragment_example_close_button)
+        button.setOnClickListener { activity.onBackPressed() }
+        headerText.text = getString(R.string.fragment_example_header_text)
     }
 }
