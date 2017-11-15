@@ -13,7 +13,7 @@ private val recycler by bindView<RecyclerView>(R.id.my_view_id)
 
 Add gradle dependency:
 ```
-compile 'com.krenvpravo.viewbinder:viewbinder:0.2'
+compile 'com.viewbinder:viewbinder:0.2'
 ```
 Or just copy code from sources to your project
 
