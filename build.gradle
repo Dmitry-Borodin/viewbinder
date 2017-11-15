@@ -2,7 +2,7 @@
 apply plugin: 'kotlin'
 
 buildscript {
-    ext.kotlin_version = '1.1.51'
+    ext.kotlin_version = '1.1.60'
     repositories {
         google()
         jcenter()
@@ -13,7 +13,6 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
-
 allprojects {
     repositories {
         google()
@@ -22,7 +21,7 @@ allprojects {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
 ext {
