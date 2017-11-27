@@ -1,5 +1,6 @@
 package android.app
 
+import android.content.Context
 import android.view.View
 
 /**
@@ -7,5 +8,8 @@ import android.view.View
  */
 public class Fragment {
     val view: View
-            get() = throw NotImplementedError("stub")
+        get() = throw NotImplementedError("stub")
+
+    val context: Context
+        get() = throw NotImplementedError("stub")
 }
