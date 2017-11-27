@@ -10,15 +10,15 @@ import android.app.Fragment
 import android.support.annotation.IdRes
 import android.view.View
 
-@Suppress("UNCHECKED_CAST")
 fun<T : View> Activity.bindView(@IdRes id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 
-@Suppress("UNCHECKED_CAST")
 fun<T : View> Fragment.abstractBind(@IdRes id: Int, lazyManager: ResettableLazyManager)
         : ResettableLazy<T> = ResettableLazy(lazyManager) { view.findViewById<T>(id) }
-@Suppress("UNCHECKED_CAST")
+fun <T : View> android.support.v4.app.Fragment.bindColor(id: Int)
+        : Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { context.getColor(id)) }
+
 fun <T : View> View.bindView(id: Int) : Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { rootView.findViewById<T>(id) }
-@Suppress("UNCHECKED_CAST")
+
 fun <T : View> Dialog.bindView(id: Int) : Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 
 //private fun viewNotFound(id:Int, desc: KProperty<*>): Nothing =
