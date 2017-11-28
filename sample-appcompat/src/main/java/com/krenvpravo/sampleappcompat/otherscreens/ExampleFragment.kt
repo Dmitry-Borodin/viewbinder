@@ -13,8 +13,9 @@ import com.krenvpravo.sampleappcompat.R
  */
 class ExampleFragment : BaseFragment() {
 
-    private val button by bind<Button>(R.id.fragment_example_button)
-    private val headerText by bind<TextView>(R.id.fragment_example_header_text)
+    private val button by bindView<Button>(R.id.fragment_example_button)
+    private val headerText by bindView<TextView>(R.id.fragment_example_header_text)
+//    private val primaryColor by bind<>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             inflater.inflate(R.layout.fragment_example, container, false)
