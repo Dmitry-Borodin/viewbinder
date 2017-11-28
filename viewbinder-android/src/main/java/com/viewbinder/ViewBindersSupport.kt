@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 
 fun<T : View> Fragment.abstractBind(@IdRes res: Int, lazyManager: ResettableLazyManager)
-        : ResettableLazy<T> = com.viewbinder.ResettableLazy(lazyManager) { view.findViewById<T>(res) }
+        : ResettableLazy<T> = ResettableLazy(lazyManager) { view.findViewById<T>(res) }
 
 fun  Fragment.bindColor(id: Int): Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { ContextCompat.getColor(context, id) }
 
