@@ -3,7 +3,7 @@ package com.krenvpravo.viewbinder.sample
 import android.app.DialogFragment
 import android.view.View
 import com.viewbinder.ResettableLazy
-import com.viewbinder.ResettableLazyManager
+import com.viewbinder.BindingResetter
 import com.viewbinder.abstractBind
 
 /**
@@ -12,11 +12,11 @@ import com.viewbinder.abstractBind
 
 open class BaseDialogFragment : DialogFragment() {
 
-    val lazyManager = ResettableLazyManager()
-    fun<T : View> bind(id: Int): ResettableLazy<T> = abstractBind(id, lazyManager)
+    val resetter = BindingResetter()
+    fun<T : View> bind(id: Int): ResettableLazy<T> = abstractBind(id, resetter)
 
     override fun onStop() {
         super.onStop()
-        lazyManager.reset()
+        resetter.reset()
     }
 }

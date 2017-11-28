@@ -3,15 +3,15 @@ package com.viewbinder
 import java.util.*
 import kotlin.reflect.KProperty
 
-class ResettableLazyManager {
-    private val managedDelegates = LinkedList<Resettable>()
+class BindingResetter {
+    private val managedResettable = LinkedList<Resettable>()
 
     fun register(managed: Resettable) {
-        managedDelegates.add(managed)
+        managedResettable.add(managed)
     }
 
     fun reset() {
-        managedDelegates.forEach { resettable -> resettable.reset() }
+        managedResettable.forEach { resettable -> resettable.reset() }
     }
 }
 
@@ -19,7 +19,7 @@ interface Resettable {
     fun reset()
 }
 
-class ResettableLazy<T>(private val manager: ResettableLazyManager,
+class ResettableLazy<T>(private val manager: BindingResetter,
                         private val init: () -> T) : Resettable {
 
     var lazyHolder : Lazy<T>? = null
