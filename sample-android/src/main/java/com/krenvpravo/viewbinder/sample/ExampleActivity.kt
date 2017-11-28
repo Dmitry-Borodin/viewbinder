@@ -23,7 +23,7 @@ class ExampleActivity : Activity() {
     private fun initViews() {
         buttonFragment.setOnClickListener { showExampleFragment() }
         buttonCustomView.setOnClickListener { showCustomView() }
-        buttonDialogFragment.setOnClickListener {showExampleFragmentDialog() }
+        buttonDialogFragment.setOnClickListener { showExampleFragmentDialog() }
         helloTextView.text = getString(R.string.hello_from_activity)
     }
 

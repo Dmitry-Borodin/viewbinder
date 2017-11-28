@@ -1,5 +1,6 @@
 package android.view
 
+import android.content.Context
 import android.support.annotation.IdRes
 
 /**
@@ -12,6 +13,10 @@ open class View {
     fun <T : View> findViewById(@IdRes id: Int): T {
         throw NotImplementedError("stub")
     }
+
     val rootView: View
+        get() = throw NotImplementedError("stub")
+
+    val context: Context
         get() = throw NotImplementedError("stub")
 }
