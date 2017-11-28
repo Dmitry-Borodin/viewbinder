@@ -6,14 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.viewbinder.bindColor
 
 /**
  * @author Dmitry Borodin on 2017-10-14.
  */
 class ExampleFragment : BaseFragment() {
 
-    private val button by bind<Button>(R.id.fragment_example_button)
-    private val headerText by bind<TextView>(R.id.fragment_example_header_text)
+    private val button by bindView<Button>(R.id.fragment_example_button)
+    private val headerText by bindView<TextView>(R.id.fragment_example_header_text)
+
+    private val primaryColor by bindColor(R.color.colorPrimary)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             inflater.inflate(R.layout.fragment_example, container, false)
@@ -26,6 +29,7 @@ class ExampleFragment : BaseFragment() {
     private fun initViews() {
         button.text = getString(R.string.fragment_example_close_button)
         button.setOnClickListener { activity.onBackPressed() }
+        button.setBackgroundColor(primaryColor)
         headerText.text = getString(R.string.fragment_example_header_text)
     }
 }
