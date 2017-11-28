@@ -12,8 +12,8 @@ import android.view.View
 
 fun <T : View> Activity.bindView(@IdRes id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 
-fun <T : View> Fragment.abstractBind(@IdRes id: Int, lazyManager: ResettableLazyManager)
-        : ResettableLazy<T> = ResettableLazy(lazyManager) { view.findViewById<T>(id) }
+fun <T : View> Fragment.abstractBind(@IdRes id: Int, resetter: BindingResetter)
+        : ResettableLazy<T> = ResettableLazy(resetter) { view.findViewById<T>(id) }
 
 fun Fragment.bindColor(id: Int)
         : Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { context.getColor(id) }

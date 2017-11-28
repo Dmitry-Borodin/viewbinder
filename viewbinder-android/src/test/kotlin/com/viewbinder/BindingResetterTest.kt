@@ -3,15 +3,15 @@ package com.viewbinder
 import org.junit.Assert.*
 import org.junit.Test
 
-class ResettableLazyManagerTest {
+class BindingResetterTest {
     @Test
-    fun testResetableLazyManager() {
+    fun testBindingResetter() {
         class Something {
             var seed = 1
-            val lazyMgr = ResettableLazyManager()
-            val x: String by ResettableLazy(lazyMgr) { "x ${seed}" }
-            val y: String by ResettableLazy(lazyMgr) { "y ${seed}" }
-            val z: String by ResettableLazy(lazyMgr) { "z $x $y" }
+            val resetter = BindingResetter()
+            val x: String by ResettableLazy(resetter) { "x ${seed}" }
+            val y: String by ResettableLazy(resetter) { "y ${seed}" }
+            val z: String by ResettableLazy(resetter) { "z $x $y" }
         }
 
         val s = Something()
@@ -29,7 +29,7 @@ class ResettableLazyManagerTest {
         assertTrue(y1 === s.y)
         assertTrue(z1 === s.z)
 
-        s.lazyMgr.reset()
+        s.resetter.reset()
 
         s.seed++ // because of reset the values should change
 

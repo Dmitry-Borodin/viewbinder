@@ -19,10 +19,18 @@ Or just copy code from sources to your project
 
 If you are using Fragments, add the following code to your base Fragment:
 ```
-private val lazyManager = ResettableLazyManager()
-fun<T> Fragment.bindView(@IdRes id: Int): ResettableLazy<T> = abstractBind(id, lazyManager)
+private val resetter = BindingResetter()
+fun<T> Fragment.bindView(@IdRes id: Int): ResettableLazy<T> = abstractBind(id, resetter)
 ```
-Samples in the project shows it in detail.
+
+And in onStop() implement
+```
+ override fun onStop() {
+        super.onStop()
+        resetter.reset()
+    }
+```
+Examples is in  samples folder.
 
 #### Note:
 DialogFragment is a Fragment;
