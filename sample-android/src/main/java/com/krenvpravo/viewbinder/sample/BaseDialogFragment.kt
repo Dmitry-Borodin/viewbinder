@@ -12,7 +12,7 @@ import com.viewbinder.abstractBind
 
 open class BaseDialogFragment : DialogFragment() {
 
-    val resetter = BindingResetter()
+    private val resetter = BindingResetter()
     fun<T : View> bind(id: Int): ResettableLazy<T> = abstractBind(id, resetter)
 
     override fun onStop() {
