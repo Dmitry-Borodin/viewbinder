@@ -2,8 +2,8 @@ package com.krenvpravo.sampleappcompat.otherscreens
 
 import android.support.v4.app.Fragment
 import android.view.View
+import com.viewbinder.BindingResetter
 import com.viewbinder.ResettableLazy
-import com.viewbinder.ResettableLazyManager
 import com.viewbinder.abstractBind
 
 /**
@@ -11,8 +11,8 @@ import com.viewbinder.abstractBind
  */
 open class BaseFragment : Fragment() {
 
-    val lazyManager = ResettableLazyManager()
-    fun <T : View> Fragment.bind(id: Int): ResettableLazy<T> = abstractBind(id, lazyManager)
+    val resetter = BindingResetter()
+    fun <T : View> Fragment.bindView(id: Int): ResettableLazy<T> = abstractBind(id, resetter)
 
     /**
      *  Reset lazy at stop, so next time we'll touch views they will be bound again, because
@@ -20,6 +20,6 @@ open class BaseFragment : Fragment() {
      */
     override fun onStop() {
         super.onStop()
-        lazyManager.reset()
+        resetter.reset()
     }
 }
