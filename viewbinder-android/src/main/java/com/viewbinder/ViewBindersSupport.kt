@@ -8,7 +8,7 @@ import android.view.View
 
 fun <T : View> Fragment.abstractBind(@IdRes res: Int, resetter: BindingResetter): ResettableLazy<T>
         = ResettableLazy(resetter) { view.findViewById<T>(res) }
-fun Fragment.bindColor2(id: Int): Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { ContextCompat.getColor(context, id) }
+fun Fragment.bindColor(id: Int): Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { ContextCompat.getColor(context, id) }
 
 fun <T : View> RecyclerView.ViewHolder.bindView(id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { itemView.findViewById<T>(id) }
 fun RecyclerView.ViewHolder.bindColor(id: Int): Lazy<Int>
