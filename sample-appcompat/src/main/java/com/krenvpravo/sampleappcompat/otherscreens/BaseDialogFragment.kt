@@ -15,7 +15,7 @@ import com.viewbinder.abstractBind
 
 open class BaseDialogFragment : DialogFragment() {
 
-    val resetter = BindingResetter()
+    private val resetter = BindingResetter()
     fun <T : View> bindView(id: Int): ResettableLazy<T> = abstractBind(id, resetter)
 
     /**

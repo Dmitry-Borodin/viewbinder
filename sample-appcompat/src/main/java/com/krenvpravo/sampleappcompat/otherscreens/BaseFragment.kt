@@ -11,7 +11,7 @@ import com.viewbinder.abstractBind
  */
 open class BaseFragment : Fragment() {
 
-    val resetter = BindingResetter()
+    private val resetter = BindingResetter()
     fun <T : View> Fragment.bindView(id: Int): ResettableLazy<T> = abstractBind(id, resetter)
 
     /**
