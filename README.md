@@ -13,7 +13,7 @@ private val recycler by bindView<RecyclerView>(R.id.my_view_id)
 
 Add gradle dependency:
 ```
-api "com.viewbinder:viewbinder:0.2"
+api "com.viewbinder:viewbinder:0.3"
 ```
 Or just copy code from sources to your project
 
