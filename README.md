@@ -30,6 +30,8 @@ And in onStop() implement
         resetter.reset()
     }
 ```
+For non-Fragments no extra code is needed.
+
 Examples is in  samples folder.
 
 #### Note:
