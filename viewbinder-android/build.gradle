@@ -2,6 +2,8 @@ apply plugin: 'kotlin'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
+def libVersion = '0.3.1'
+
 //  to upload to jcenter use ./gradlew build bintrayUpload
 bintray {
     def keyProps = new Properties()
@@ -16,21 +18,33 @@ bintray {
         vcsUrl = 'https://github.com/Dmitry-Borodin/viewbinder'
 
         version {
-            name = '0.3'
+            name = libVersion
             desc = 'viewbinder to bind your views by kotlin delegates'
             released  = new Date()
 //            vcsTag = '1.3.0'
-//            attributes = ['gradle-plugin': 'com.krenvpravo.viewbinder:viewbinder:0.1']
+            attributes = ['gradle-plugin': 'com.viewbinder:viewbinder:0.1']
         }
     }
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
 }
 publishing {
     publications {
         MyPublication(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
             artifact jar
             groupId 'com.viewbinder'
             artifactId 'viewbinder'
-            version '0.3'
+            version libVersion
         }
     }
 }
