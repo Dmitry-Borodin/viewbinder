@@ -2,7 +2,9 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-0.3.1 bintray upload changed - you'll get sources and javadocs in repository artifacts now.
+0.3.1 - bintray upload changed - you'll get sources and javadocs in repository artifacts now
+- Visibility of internal elements changed (I expect nobody used it so far)
+- fixed leaking resettable in managed list
 
 ## [0.3.0] - 2017-12-11
 - Breaking change: ResettableLazyManager renamed to BindingResetter
