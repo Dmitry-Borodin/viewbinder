@@ -27,7 +27,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-//    compile 'com.krenvpravo.viewbinder:viewbinder:0.2'
+//    api 'com.viewbinder:viewbinder:0.3'
     implementation project(path: ':viewbinder-android')
 
     testCompile 'junit:junit:4.12'

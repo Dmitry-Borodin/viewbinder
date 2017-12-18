@@ -13,7 +13,7 @@ private val recycler by bindView<RecyclerView>(R.id.my_view_id)
 
 Add gradle dependency:
 ```
-compile 'com.viewbinder:viewbinder:0.2'
+api "com.viewbinder:viewbinder:0.3"
 ```
 Or just copy code from sources to your project
 
@@ -30,6 +30,8 @@ And in onStop() implement
         resetter.reset()
     }
 ```
+For non-Fragments no extra code is needed.
+
 Examples is in  samples folder.
 
 #### Note:

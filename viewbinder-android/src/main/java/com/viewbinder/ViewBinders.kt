@@ -1,12 +1,8 @@
 package com.viewbinder
 
 import android.app.Activity
-
-
 import android.app.Dialog
 import android.app.Fragment
-
-
 import android.support.annotation.IdRes
 import android.view.View
 

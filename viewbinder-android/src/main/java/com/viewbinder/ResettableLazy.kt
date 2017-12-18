@@ -6,7 +6,7 @@ import kotlin.reflect.KProperty
 class BindingResetter {
     private val managedResettable = LinkedList<Resettable>()
 
-    fun register(managed: Resettable) {
+    internal fun register(managed: Resettable) {
         managedResettable.add(managed)
     }
 
@@ -19,10 +19,13 @@ interface Resettable {
     fun reset()
 }
 
-class ResettableLazy<T>(private val manager: BindingResetter,
-                        private val init: () -> T) : Resettable {
+class ResettableLazy<out T>(manager: BindingResetter,
+                            private val init: () -> T) : Resettable {
+    init {
+        manager.register(this)
+    }
 
-    var lazyHolder : Lazy<T>? = null
+    private var lazyHolder : Lazy<T>? = null
 
     operator fun getValue(thisRef: Any?, property: KProperty<*>): T = lazyHolder?.value ?: initLazyHolder().value
 
@@ -32,7 +35,6 @@ class ResettableLazy<T>(private val manager: BindingResetter,
 
     private fun initLazyHolder(): Lazy<T> {
         val lazyHolder = lazy(LazyThreadSafetyMode.NONE) {
-            manager.register(this)
             init()
         }
         this.lazyHolder = lazyHolder
