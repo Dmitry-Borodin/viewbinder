@@ -12,7 +12,7 @@ import com.viewbinder.abstractBind
 open class BaseFragment : Fragment() {
 
     private val resetter = BindingResetter()
-    fun <T : View> Fragment.bindView(id: Int): ResettableLazy<T> = abstractBind(id, resetter)
+    fun <T : View> bindView(id: Int): ResettableLazy<T> = abstractBind(id, resetter)
 
     /**
      *  Reset lazy at stop, so next time we'll touch views they will be bound again, because
