@@ -15,5 +15,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fragment_example_button"
-        tools:text="button text"/>/>
+        tools:text="button text"/>
 </LinearLayout>
