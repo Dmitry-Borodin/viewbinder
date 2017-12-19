@@ -40,8 +40,6 @@ publishing {
         MyPublication(MavenPublication) {
             from components.java
             artifact sourcesJar
-            artifact javadocJar
-            artifact jar
             groupId 'com.viewbinder'
             artifactId 'viewbinder'
             version libVersion
