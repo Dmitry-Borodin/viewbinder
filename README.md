@@ -50,6 +50,15 @@ private val recycler : RecyclerView?  by bindView<RecyclerView?>(R.id.my_view_id
 1. Kotlin
 2. Build tools or support library version > 26
 
+##Migration from ButterKnife
+In Android studio run "Replace in path"
+ 
+search for
+```@BindView\((.*)\) internal lateinit var (.*): (.*)```
+ 
+replace with
+```private val $2 by bindView<$3>($1)```
+
 
 ### Library is based on kotlin delegated properties
 #### Pros:
