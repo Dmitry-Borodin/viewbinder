@@ -1,1 +1,3 @@
-include ':sample-android', ':viewbinder-android', ':stub-android', ':sample-appcompat', 'stub-appcompat'
+include ':sample-android', ':viewbinder-android', ':stub-android',
+        ':sample-appcompat', 'stub-appcompat',
+        ':sample-androidx', ':stub-androidx'
