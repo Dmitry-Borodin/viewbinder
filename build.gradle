@@ -27,8 +27,8 @@ dependencies {
 ext {
     targetSdkVersion = 26
     minSdkVersion = 14
-    compileSdkVersion = 26
-    buildToolsVersion = '26.0.2'
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.3'
 
     supportLibraryVersion = '26.1.0'
 }
