@@ -1,9 +1,9 @@
-package android.support.v7.widget
+package androidx.recyclerview.widget
 
 import android.view.View
 
 /**
- * @author Dmitry Borodin on 2017-10-14.
+ * @author Dmitry Borodin on 12/3/18.
  */
 class RecyclerView {
     public class ViewHolder {

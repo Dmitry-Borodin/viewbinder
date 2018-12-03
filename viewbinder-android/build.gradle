@@ -54,6 +54,7 @@ dependencies {
 //    javadocDeps 'com.google.android:support-v4:r7'
     compileOnly project(':stub-android')
     compileOnly project(':stub-appcompat')
+    compileOnly project(':stub-androidx')
 //    javadocDeps project(':stub-android')
 
     testImplementation 'junit:junit:4.12'

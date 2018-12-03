@@ -44,7 +44,7 @@ class ExampleCompatActivity : AppCompatActivity() {
 
     private fun showExampleFragmentDialog() {
         val dialogFragment = ExampleDialogFragment()
-        dialogFragment.show(fragmentManager, dialogFragment.javaClass.simpleName)
+        dialogFragment.show(supportFragmentManager, dialogFragment.javaClass.simpleName)
     }
 
     private fun showCustomView() {
@@ -52,8 +52,8 @@ class ExampleCompatActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (fragmentManager.backStackEntryCount > 0) {
-            fragmentManager.popBackStack()
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStack()
         } else {
             super.onBackPressed()
         }
