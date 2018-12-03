@@ -29,7 +29,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.0.0"
 //    implementation 'androidx.cardview:cardview:1.0.0'
 //    api 'com.viewbinder:viewbinder:0.3.1'
-    implementation project(path: ':viewbinder-android')
+    api project(':viewbinder-android')
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
