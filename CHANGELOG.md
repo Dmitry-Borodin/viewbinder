@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+Added Adnroidx support
+
 0.3.1 - bintray upload changed - you'll get sources and javadocs in repository artifacts now
 - Visibility of internal elements changed (I expect nobody used it so far)
 - fixed leaking resettable in managed list
