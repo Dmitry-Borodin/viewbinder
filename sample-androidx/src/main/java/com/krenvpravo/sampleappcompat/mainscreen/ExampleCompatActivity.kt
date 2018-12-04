@@ -20,7 +20,7 @@ class ExampleCompatActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_compat)
+        setContentView(R.layout.activity_androidx)
         initViews()
     }
 

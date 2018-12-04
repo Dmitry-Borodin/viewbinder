@@ -1,10 +1,10 @@
 package com.viewbinder
 
+import android.support.annotation.IdRes
+import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import android.support.annotation.IdRes
-import android.view.View
 
 /**
  * @author Dmitry Borodin on 12/3/18.

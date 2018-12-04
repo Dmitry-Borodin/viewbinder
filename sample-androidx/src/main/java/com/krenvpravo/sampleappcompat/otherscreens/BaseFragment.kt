@@ -1,9 +1,11 @@
 package com.krenvpravo.sampleappcompat.otherscreens
 
+
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.viewbinder.BindingResetter
 import com.viewbinder.ResettableLazy
+import com.viewbinder.abstractBind
 
 /**
  * @author Dmitry Borodin on 2017-10-10.

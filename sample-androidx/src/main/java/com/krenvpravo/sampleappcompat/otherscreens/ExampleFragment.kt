@@ -27,7 +27,7 @@ class ExampleFragment : BaseFragment() {
 
     private fun initViews() {
         button.text = getString(R.string.fragment_example_button_title)
-        button.setOnClickListener { activity.onBackPressed() }
+        button.setOnClickListener { requireActivity().onBackPressed() }
         headerText.text = getString(R.string.fragment_example_header)
     }
 }
