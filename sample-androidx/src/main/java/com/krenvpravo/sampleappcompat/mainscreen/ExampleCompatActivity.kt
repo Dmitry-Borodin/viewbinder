@@ -2,11 +2,11 @@ package com.krenvpravo.sampleappcompat.mainscreen
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.krenvpravo.sampleappcompat.R
 import com.krenvpravo.sampleappcompat.ScreenItemModel
 import com.krenvpravo.sampleappcompat.otherscreens.ExampleDialogFragment
@@ -20,7 +20,7 @@ class ExampleCompatActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_compat)
+        setContentView(R.layout.activity_androidx)
         initViews()
     }
 
@@ -44,7 +44,7 @@ class ExampleCompatActivity : AppCompatActivity() {
 
     private fun showExampleFragmentDialog() {
         val dialogFragment = ExampleDialogFragment()
-        dialogFragment.show(fragmentManager, dialogFragment.javaClass.simpleName)
+        dialogFragment.show(supportFragmentManager, dialogFragment.javaClass.simpleName)
     }
 
     private fun showCustomView() {
@@ -52,8 +52,8 @@ class ExampleCompatActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (fragmentManager.backStackEntryCount > 0) {
-            fragmentManager.popBackStack()
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStack()
         } else {
             super.onBackPressed()
         }

@@ -20,14 +20,14 @@ class ExampleFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             inflater.inflate(R.layout.fragment_example, container, false)
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
     }
 
     private fun initViews() {
         button.text = getString(R.string.fragment_example_button_title)
-        button.setOnClickListener { activity.onBackPressed() }
+        button.setOnClickListener { requireActivity().onBackPressed() }
         headerText.text = getString(R.string.fragment_example_header)
     }
 }

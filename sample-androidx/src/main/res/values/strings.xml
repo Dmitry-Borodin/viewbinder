@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">sample-appcompat</string>
+    <string name="app_name_androidx">sample-androidx</string>
     <string name="activity_example_header">AppCompatActivity header text</string>
     <string name="dialog_fragment_header">SupportDialogFragment header</string>
     <string name="dialog_fragment_button">Close SupportDialogFragment</string>

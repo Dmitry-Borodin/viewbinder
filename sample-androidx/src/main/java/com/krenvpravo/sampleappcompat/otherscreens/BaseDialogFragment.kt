@@ -1,7 +1,7 @@
 package com.krenvpravo.sampleappcompat.otherscreens
 
-import android.app.DialogFragment
 import android.view.View
+import androidx.fragment.app.DialogFragment
 import com.viewbinder.BindingResetter
 import com.viewbinder.ResettableLazy
 import com.viewbinder.abstractBind

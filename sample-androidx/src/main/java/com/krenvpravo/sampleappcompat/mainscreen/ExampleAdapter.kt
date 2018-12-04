@@ -1,16 +1,16 @@
 package com.krenvpravo.sampleappcompat.mainscreen
 
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.recyclerview.widget.RecyclerView
 import com.krenvpravo.sampleappcompat.R
 import com.krenvpravo.sampleappcompat.ScreenItemModel
 import com.viewbinder.bindView
 
 /**
- * @author Dmitry Borodin on 2017-10-14.
+ * @author Dmitry Borodin on 2018-12-02.
  */
 
 class ExampleAdapter : RecyclerView.Adapter<ButtonViewHolder>() {
