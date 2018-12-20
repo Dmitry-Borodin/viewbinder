@@ -2,9 +2,15 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.4.1] - 2018-12-20
+Fixed issue of uploading proper sources to jcenter (by updating jFrog gradle plugin)
+
+## [0.4.0] - 2018-12-20
 Added Adnroidx support
 
-0.3.1 - bintray upload changed - you'll get sources and javadocs in repository artifacts now
+## [0.3.1]
+- bintray upload changed - you'll get sources and javadocs in repository artifacts now
 - Visibility of internal elements changed (I expect nobody used it so far)
 - fixed leaking resettable in managed list
 
