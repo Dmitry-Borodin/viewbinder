@@ -1,14 +1,12 @@
-package com.viewbinder
+package com.viewbinder.support
 
 import android.support.annotation.IdRes
+import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
+import android.support.v7.widget.RecyclerView
 import android.view.View
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
-
-/**
- * @author Dmitry Borodin on 12/3/18.
- */
+import com.viewbinder.BindingResetter
+import com.viewbinder.ResettableLazy
 
 fun <T : View> Fragment.abstractBind(@IdRes res: Int, resetter: BindingResetter): ResettableLazy<T>
         = ResettableLazy(resetter) { view.findViewById<T>(res) }
