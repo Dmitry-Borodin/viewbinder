@@ -1,6 +1,7 @@
 # viewbinder for Android
 
-[ ![Download](https://api.bintray.com/packages/dmitrii/viewbinder/viewbinder/images/download.svg) ](https://bintray.com//dmitrii/viewbinder/viewbinder/_latestVersion) 
+[![Build Status](https://travis-ci.org/Dmitry-Borodin/viewbinder.svg?branch=master)](https://travis-ci.org/Dmitry-Borodin/viewbinder)  
+[![Download](https://api.bintray.com/packages/dmitrii/viewbinder/viewbinder/images/download.svg) ](https://bintray.com//dmitrii/viewbinder/viewbinder/_latestVersion) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 View binding without an annotation processing and with just a few methods added to your dex.
