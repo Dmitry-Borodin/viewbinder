@@ -7,7 +7,7 @@ def libVersion = '0.4.1'
 //  to upload to jcenter use ./gradlew build bintrayUpload
 bintray {
     def keyProps = new Properties()
-    keyProps.load(new FileInputStream(rootProject.file('viewbinder-secret/credentials.properties')))
+//    keyProps.load(new FileInputStream(rootProject.file('viewbinder-secret/credentials.properties')))
     user = keyProps["bintrayUser"]
     key = keyProps["bintrayKey"]
     publications = ['MyPublication']
