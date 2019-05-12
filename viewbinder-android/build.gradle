@@ -2,7 +2,7 @@ apply plugin: 'kotlin'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
-def libVersion = '0.4.2'
+def libVersion = '0.4.3'
 
 //  to upload to jcenter use ./gradlew build bintrayUpload
 bintray {
