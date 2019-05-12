@@ -1,6 +1,6 @@
 # viewbinder for Android
 
-[![Build Status](https://travis-ci.org/Dmitry-Borodin/viewbinder.svg?branch=master)](https://travis-ci.org/Dmitry-Borodin/viewbinder)  
+[![Build Status](https://app.bitrise.io/app/c5bc2cebac804887/status.svg?token=lpe0SK_F8caRxLfhE5wKIw&branch=dev)](https://app.bitrise.io/app/c5bc2cebac804887) 
 [![Download](https://api.bintray.com/packages/dmitrii/viewbinder/viewbinder/images/download.svg) ](https://bintray.com//dmitrii/viewbinder/viewbinder/_latestVersion) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
