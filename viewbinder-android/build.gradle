@@ -6,10 +6,8 @@ def libVersion = '0.4.1'
 
 //  to upload to jcenter use ./gradlew build bintrayUpload
 bintray {
-    def keyProps = new Properties()
-//    keyProps.load(new FileInputStream(rootProject.file('viewbinder-secret/credentials.properties')))
-    user = keyProps["bintrayUser"]
-    key = keyProps["bintrayKey"]
+    user = System.getenv('bintrayUser')
+    key = System.getenv('bintrayKey')
     publications = ['MyPublication']
     pkg {
         repo = 'viewbinder'
@@ -50,14 +48,12 @@ publishing {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-//    compileOnly 'com.google.android:support-v4:r7'
-//    javadocDeps 'com.google.android:support-v4:r7'
     compileOnly project(':stub-android')
     compileOnly project(':stub-appcompat')
     compileOnly project(':stub-androidx')
 //    javadocDeps project(':stub-android')
 
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-core:2.7.11'
+    testImplementation 'org.mockito:mockito-core:2.27.0'
 }
 
