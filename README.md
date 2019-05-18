@@ -1,6 +1,6 @@
 # viewbinder for Android
 
-[![Build Status](https://app.bitrise.io/app/c5bc2cebac804887/status.svg?token=lpe0SK_F8caRxLfhE5wKIw&branch=dev)](https://app.bitrise.io/app/c5bc2cebac804887) 
+[![Build Status](https://app.bitrise.io/app/5576398801c9399c/status.svg?token=_HS5QG9xmb52Q7Et0LDzAw&branch=dev)](https://app.bitrise.io/app/5576398801c9399c)
 [![Download](https://api.bintray.com/packages/dmitrii/viewbinder/viewbinder/images/download.svg) ](https://bintray.com//dmitrii/viewbinder/viewbinder/_latestVersion) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
