@@ -72,3 +72,5 @@ replace with
 1. Works only with Kotlin
 2. You have to add two lines to your parent Fragments
 3. No easy way to set click listeners with meta programming
+4. If you have kotlin-reflect library if your module available, unnecessary reflection calls will happen on each kotlin delegation creation (in out case for each view binding)
+ 
