@@ -63,12 +63,18 @@ search for
 replace with
 ```private val $2 by bindView<$3>($1)```
 
+-----
+
+#### Similar to [KotterKnife](https://github.com/JakeWharton/kotterknife), but:
+* Available in jcenter and bintray
+* Less abstractions/code/methods - simpler to copy code without maven dependencies 
 
 ### Library is based on kotlin delegated properties
 #### Pros:
 1. No annotation processing involved -> fast compile time.
 2. Just a few methods in the library -> good for dex limit
 3. Clear and managable declaration of binded views -> good for you
+4. XML naming conventions are still independent from view names in code.
 
 #### Cons:
 1. Works only with Kotlin
