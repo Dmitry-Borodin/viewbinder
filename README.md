@@ -11,7 +11,15 @@ View binding without an annotation processing and with just a few methods added 
 private val recycler by bindView<RecyclerView>(R.id.my_view_id)
 ```
 
-## Getting Started:
+## Add to your project:
+
+The library is hosted in jcenter, it is available by default on new android projects
+```
+     repositories {
+        <...>
+        jcenter()
+    }
+```
 
 Add gradle dependency:
 ```
