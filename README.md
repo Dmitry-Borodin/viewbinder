@@ -15,9 +15,11 @@ private val recycler by bindView<RecyclerView>(R.id.my_view_id)
 
 Add gradle dependency:
 ```
-api "com.viewbinder:viewbinder:0.3.1"
+api "com.viewbinder:viewbinder:0.4.3"
 ```
-Or just copy code from sources to your project
+Or just copy code from sources to your project. This library is very slim and was written in idea that you'll copy few functions instead of adding dependency. 
+
+#### Fragments
 
 If you are using Fragments, add the following code to your base Fragment:
 ```
@@ -34,7 +36,7 @@ And in onStop() implement
 ```
 For non-Fragments no extra code is needed. Just bind your views.
 
-Examples is in  samples folder.
+Examples is in samples folder.
 
 #### Note:
 DialogFragment is a Fragment;
