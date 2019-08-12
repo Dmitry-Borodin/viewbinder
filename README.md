@@ -3,6 +3,7 @@
 [![Build Status](https://app.bitrise.io/app/5576398801c9399c/status.svg?token=_HS5QG9xmb52Q7Et0LDzAw&branch=dev)](https://app.bitrise.io/app/5576398801c9399c)
 [![Download](https://api.bintray.com/packages/dmitrii/viewbinder/viewbinder/images/download.svg) ](https://bintray.com//dmitrii/viewbinder/viewbinder/_latestVersion) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Viewbinder-green.svg?style=flat )]( https://android-arsenal.com/details/1/7819 )
 
 View binding without an annotation processing and with just a few methods added to your dex.
 
