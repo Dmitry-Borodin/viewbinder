@@ -49,11 +49,10 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     compileOnly project(':stub-android')
-    compileOnly project(':stub-appcompat')
     compileOnly project(':stub-androidx')
 //    javadocDeps project(':stub-android')
 
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-core:2.27.0'
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.mockito:mockito-core:3.2.4'
 }
 
