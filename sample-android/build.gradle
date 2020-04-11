@@ -22,7 +22,8 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation project(path: ':viewbinder-android')
+    implementation 'com.viewbinder:viewbinder:0.4.4'
+//    implementation project(path: ':viewbinder-android')
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
