@@ -7,7 +7,7 @@ import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.krenvpravo.sampleappcompat.R
 import com.krenvpravo.sampleappcompat.ScreenItemModel
-import com.viewbinder.androidx.bindView
+import com.viewbinder.bindView
 
 /**
  * @author Dmitry Borodin on 2018-12-02.
