@@ -2,7 +2,7 @@ apply plugin: 'kotlin'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
-def libVersion = '0.4.4'
+def libVersion = '1.0.0'
 
 //  to upload to jcenter use ./gradlew build bintrayUpload
 bintray {
@@ -19,7 +19,7 @@ bintray {
             name = libVersion
             desc = 'viewbinder to bind your views by kotlin delegates'
             released  = new Date()
-//            vcsTag = '1.3.0'
+            vcsTag = libVersion
             attributes = ['gradle-plugin': "com.viewbinder:viewbinder:$libVersion"]
         }
     }
