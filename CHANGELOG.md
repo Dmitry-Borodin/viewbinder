@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.4.4] - 2020-04-11
+updated some google dependencies
+moved viewbinder functions to single package
+
 ## [0.4.1] - 2018-12-20
 Fixed issue of uploading proper sources to jcenter (by updating jFrog gradle plugin)
 
