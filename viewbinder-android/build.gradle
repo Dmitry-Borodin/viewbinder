@@ -49,6 +49,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     compileOnly project(':stub-android')
+    compileOnly project(':stub-appcompat')
     compileOnly project(':stub-androidx')
 //    javadocDeps project(':stub-android')
 
