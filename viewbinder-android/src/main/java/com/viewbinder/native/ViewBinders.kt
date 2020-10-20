@@ -1,10 +1,12 @@
-package com.viewbinder
+package com.viewbinder.native
 
 import android.app.Activity
 import android.app.Dialog
 import android.app.Fragment
 import android.support.annotation.IdRes
 import android.view.View
+import com.viewbinder.BindingResetter
+import com.viewbinder.ResettableLazy
 
 fun <T : View> Activity.bindView(@IdRes id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 fun Activity.bindColor(id: Int): Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { context.resources.getColor(id); }

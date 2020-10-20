@@ -3,8 +3,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.0] - 20-10-20
+Extension functions moved to different packages like for androidx.Fragment and support.Fragment - if they are in the same package compiler complaned for users.  
+This is a breaking change means all users have to update imports. Nothing changed in behaviour.
+
 ## [1.1.0] - 2020-10-20
-bindings for custom View are searching in this view, not in rootView. This was a bug and it's a breaking changes, but I don't expect ppl to rely on this bug.
+Bindings for custom View are searching in this view, not in rootView. This was a bug and it's a breaking changes, but I don't expect ppl to rely on this bug.
 
 ## [1.0.0] - 2020-04-11
 The same as 0.4.4 - made release version

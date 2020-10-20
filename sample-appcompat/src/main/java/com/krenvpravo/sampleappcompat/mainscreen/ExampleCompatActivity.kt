@@ -11,7 +11,6 @@ import com.krenvpravo.sampleappcompat.R
 import com.krenvpravo.sampleappcompat.ScreenItemModel
 import com.krenvpravo.sampleappcompat.otherscreens.ExampleDialogFragment
 import com.krenvpravo.sampleappcompat.otherscreens.ExampleFragment
-import com.viewbinder.bindView
 
 class ExampleCompatActivity : AppCompatActivity() {
 
