@@ -13,8 +13,8 @@ fun <T : View> Fragment.abstractBind(@IdRes id: Int, resetter: BindingResetter)
         : ResettableLazy<T> = ResettableLazy(resetter) { view.findViewById<T>(id) }
 fun Fragment.bindColor(id: Int): Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { view.context.resources.getColor(id); }
 
-fun <T : View> View.bindView(id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { rootView.findViewById<T>(id) }
-fun View.bindColor(id: Int): Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { rootView.context.resources.getColor(id); }
+fun <T : View> View.bindView(id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
+fun View.bindColor(id: Int): Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { context.resources.getColor(id); }
 
 fun <T : View> Dialog.bindView(id: Int): Lazy<T> = lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 //fun Dialog.bindColor(id: Int): Lazy<Int> = lazy(LazyThreadSafetyMode.NONE) { view.context.resources.getColor(id); }

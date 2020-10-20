@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.1.0] - 2020-10-20
+bindings for custom View are searching in this view, not in rootView. This was a bug and it's a breaking changes, but I don't expect ppl to rely on this bug.
+
 ## [1.0.0] - 2020-04-11
 The same as 0.4.4 - made release version
 
