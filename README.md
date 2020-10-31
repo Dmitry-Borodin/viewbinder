@@ -24,7 +24,7 @@ The library is hosted in jcenter, it is available by default on new android proj
 
 Add gradle dependency:
 ```
-api "com.viewbinder:viewbinder:0.4.3"
+api "com.viewbinder:viewbinder:2.0.0"
 ```
 Or just copy code from sources to your project. This library is very slim and was written in idea that you'll copy few functions instead of adding dependency. 
 
