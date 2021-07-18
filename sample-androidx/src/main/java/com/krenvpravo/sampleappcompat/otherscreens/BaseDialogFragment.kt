@@ -4,7 +4,7 @@ import android.view.View
 import androidx.fragment.app.DialogFragment
 import com.viewbinder.BindingResetter
 import com.viewbinder.ResettableLazy
-import com.viewbinder.abstractBind
+import com.viewbinder.androidx.abstractBind
 
 /**
  * DialogFragment is a Fragment

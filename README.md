@@ -24,7 +24,7 @@ The library is hosted in the central repository.
 
 Add gradle dependency:
 ```
-api "com.dmitryborodin:viewbinder:2.1.0"
+api "com.dmitryborodin:viewbinder-android:2.1.0"
 ```
 Or just copy code from sources to your project. This library is very slim and was written in idea that you'll copy few functions instead of adding dependency. 
 
