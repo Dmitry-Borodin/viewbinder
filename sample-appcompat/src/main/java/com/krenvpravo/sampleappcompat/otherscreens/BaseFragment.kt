@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment
 import android.view.View
 import com.viewbinder.BindingResetter
 import com.viewbinder.ResettableLazy
-import com.viewbinder.abstractBind
+import com.viewbinder.support.abstractBind
 
 /**
  * @author Dmitry Borodin on 2017-10-10.

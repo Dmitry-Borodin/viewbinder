@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import com.viewbinder.bindColor
+import com.viewbinder.native.bindColor
 
 /**
  * @author Dmitry Borodin on 2017-10-14.

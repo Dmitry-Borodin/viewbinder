@@ -1,0 +1,14 @@
+
+
+// Set up Sonatype repository
+nexusPublishing {
+    repositories {
+        sonatype {
+            stagingProfileId = SONATYPE_STAGING_PROFILE_ID
+            username = OSSRH_USERNAME
+            password = OSSRH_PASSWORD
+        }
+    }
+}
+
+

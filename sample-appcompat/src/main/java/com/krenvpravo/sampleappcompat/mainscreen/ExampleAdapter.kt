@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.krenvpravo.sampleappcompat.R
 import com.krenvpravo.sampleappcompat.ScreenItemModel
-import com.viewbinder.bindView
+import com.viewbinder.support.bindView
 
 /**
  * @author Dmitry Borodin on 2017-10-14.
