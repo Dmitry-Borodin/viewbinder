@@ -1,7 +1,7 @@
 # viewbinder for Android
 
 [![Build Status](https://app.bitrise.io/app/5576398801c9399c/status.svg?token=_HS5QG9xmb52Q7Et0LDzAw&branch=dev)](https://app.bitrise.io/app/5576398801c9399c)
-[![Download](https://api.bintray.com/packages/dmitrii/viewbinder/viewbinder/images/download.svg) ](https://bintray.com//dmitrii/viewbinder/viewbinder/_latestVersion) 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.dmitryborodin/viewbinder-android/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.dmitryborodin/viewbinder-android)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Viewbinder-green.svg?style=flat )]( https://android-arsenal.com/details/1/7819 )
 
@@ -14,17 +14,17 @@ private val recycler by bindView<RecyclerView>(R.id.my_view_id)
 
 ## Add to your project:
 
-The library is hosted in jcenter, it is available by default on new android projects
+The library is hosted in the central repository.
 ```
      repositories {
         <...>
-        jcenter()
+        mavenCentral()
     }
 ```
 
 Add gradle dependency:
 ```
-api "com.viewbinder:viewbinder:2.0.0"
+api "com.dmitryborodin:viewbinder:2.1.0"
 ```
 Or just copy code from sources to your project. This library is very slim and was written in idea that you'll copy few functions instead of adding dependency. 
 

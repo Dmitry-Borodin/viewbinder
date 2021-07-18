@@ -2,8 +2,8 @@ ext {
     libraryVersion = '2.1.0'
 
     libraryName = 'viewbinder-android'
-    publishedGroupId = 'com.viewbinder'
-    artifactId = 'viewbinder'
+    publishedGroupId = 'com.dmitryborodin'
+    artifactId = 'viewbinder-android'
 
     libraryDescription = 'viewbinder to bind your views by kotlin delegates'
 
