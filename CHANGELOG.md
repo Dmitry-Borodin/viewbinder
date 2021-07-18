@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.1.0] - 2021-07-18
+Released the same code to maven central repository. For dependencies versions updated.
+
 ## [2.0.0] - 20-10-20
 Extension functions moved to different packages like for androidx.Fragment and support.Fragment - if they are in the same package compiler complaned for users.  
 This is a breaking change means all users have to update imports. Nothing changed in behaviour.
