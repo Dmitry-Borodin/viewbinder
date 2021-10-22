@@ -11,7 +11,7 @@ buildscript {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 //    compile 'com.google.android:android:4.1.1.4'
 //    javadocDeps 'com.google.android:android:4.1.1.4'
 }
